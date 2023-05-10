@@ -16,6 +16,7 @@
     --main-color: #daa954;
     --big-font: 5rem;
     --h2-font: 3rem;
+    --h3-font:1.4rem;
     --p-font: 1.1rem;
 
 
@@ -90,8 +91,8 @@ section{
     position: relative;
     height: 100vh;
     width: 100%;
-    background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/05/Amazing-HD-Black-Wallpapers.jpg");
-
+    background-image: url("./images/pexels-daniel-putzer-633409.jpg");
+    opacity: 100%;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -204,34 +205,41 @@ header.sticky{
 /* ---------------------------------------------------about section styles----------------------------------------------- */
 
 #about{
-    border: 0px solid #daa954;
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(2,1fr);
-    align-items: center;  
+    align-items: center;   */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 
 }
+.about-img{
+    flex-basis: 35%;
+}
 .about-img img{
-    border: 0px solid #daa954;
+    margin-left: 40px;
     max-width: 350px;
     height: auto;
     width: 80%;
     border-radius: 10%;
-    align-items: end;
+    /* align-items: end; */
     
 }
-
-.nav-link-about h2{
+.nav-link{
+    flex-basis: 60%;
+}
+.nav-link .about h2{
     font-size: var(--h2-font);
     line-height: 1;
 }
-.nav-link-about h4{
+.nav-link .about h4{
     font-size: 24px;
     font-weight: 600;
     color: var(--text-color);
     line-height: 1.7;
     margin:  15px 0 30px;
 }
-.nav-link-about p{
+.nav-link .about p{
     color: var(--second-color);
     font-size: var(--p-font);
     line-height: 1.8;
@@ -359,13 +367,16 @@ header.sticky{
     display: block;
     transition: transform 0.5s;
 }
+#banking{
+    height: 436px;
+}
 .layer{
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(189, 31, 31, 0.1),#e45d15);
+    background: linear-gradient(rgba(189, 31, 31, 0.1),#d83734);
     position:absolute;
     border-radius: 8px;
-    color: black;
+    color: white;
     font-weight: 600;
     left: 0;
     bottom: 0;
@@ -385,7 +396,7 @@ header.sticky{
 }
 .layer p{
     color: var(--second-color);
-    color: black;
+    color: white;
     font-size: 1rem;
     line-height: 1.8;
 }
@@ -596,18 +607,21 @@ header.sticky{
       }
 }
 @media (max-width:920px){
-    #about{
-        grid-template-columns: 1fr;
-    }
+    
     .about-img{
-        text-align: center;
-        order: 2;
+       flex-basis: 80%;
     }
-    .about-img img{
-        width: 100%;
-        height: auto;
-        max-width:100%
+    .nav-link .about h2{
+        font-size: var(--p-font);
+        line-height: 0.4;
     }
+    .nav-link .about p{
+        color: var(--second-color);
+        font-size: var(--p-font);
+        line-height: 1.8;
+        margin-bottom: 4rem;
+    }
+    
     #contact{
         grid-template-columns: 1fr;
     }

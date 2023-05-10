@@ -92,7 +92,6 @@ section{
     height: 100vh;
     width: 100%;
     background-image: url("./images/ryunosuke-kikuno-zE-MrTmjzd4-unsplash.jpg");
-    /* opacity: 100%; */
     background-size: cover;
     background-position: center;
     display: flex;
